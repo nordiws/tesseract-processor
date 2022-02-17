@@ -28,6 +28,8 @@ Put images samples at the 'img' folder
 
 * At a CLI run:
 ```
+cd tesseract-processor
+pip install -r requirements.txt
 app.py
 ```
 
