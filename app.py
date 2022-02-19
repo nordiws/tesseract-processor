@@ -10,8 +10,10 @@ from imageRotation import imgRotation
 
 imgDir = 'img'
 
+# Converting PDF to image
 pdf2img()
-# imgRotation()
+
+imgRotation()
 
 images = []
 

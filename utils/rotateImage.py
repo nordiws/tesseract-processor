@@ -5,11 +5,13 @@ import cv2
 def rotateImage(rotateImage, angle):
 
     # Taking image height and width
-    imgHeight, imgWidth = rotateImage.shape[0], rotateImage.shape[1]
+    imgHeight = rotateImage.shape[0]
+    imgWidth = rotateImage.shape[1]
 
     # Computing the centre x,y coordinates
     # of an image
-    centreY, centreX = imgHeight//2, imgWidth//2
+    centreY = imgHeight/2
+    centreX = imgWidth/2
 
     # Computing 2D rotation Matrix to rotate an image
     rotationMatrix = cv2.getRotationMatrix2D((centreY, centreX), angle, 1.0)
@@ -29,8 +31,8 @@ def rotateImage(rotateImage, angle):
 
     # After computing the new height & width of an image
     # we also need to update the values of rotation matrix
-    rotationMatrix[0][2] += (newImageWidth/2) - centreX
-    rotationMatrix[1][2] += (newImageHeight/2) - centreY
+    rotationMatrix[0][2] += (newImageHeight/2) - centreY
+    rotationMatrix[1][2] += (newImageWidth/2) - centreX
 
     # Now, we will perform actual image rotation
     rotatedImage = cv2.warpAffine(
