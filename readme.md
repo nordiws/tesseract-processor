@@ -2,7 +2,8 @@
 
 ## Description
 
-Pytesseract practice project
+Pytesseract practice project. 
+The script will take one our more PDF files, extract each page to an image, preprocess the images with different techniques, rotate if necessary and extract all text from images to a .txt file.
 
 ## Getting Started
 
