@@ -9,7 +9,9 @@ def image_rotation():
 
     # Iterating through each image in folder and extracting OSD information
     for img in os.scandir(image_dir):
-        osd = pytesseract.image_to_osd(".\img\\" + img.name, output_type=Output.DICT)
+        osd = pytesseract.image_to_osd(
+            ".\img\\" + img.name, output_type=Output.DICT)
+        print(osd)
 
         # If the orientation is different from horizontal rotate the image
         if osd['orientation'] != 0:
