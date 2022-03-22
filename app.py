@@ -1,12 +1,12 @@
 import cv2 as cv
 from cv2 import threshold
-import utils.image_preprocess as image_preprocess
 import pytesseract
 from pytesseract import Output
 import numpy
-from utils.pdf2img import pdf2img
 import os
 from pathlib import Path
+from utils.pdf2img import pdf2img
+import utils.image_preprocess as image_preprocess
 from utils.image_rotation import image_rotation
 
 image_dir = 'img'
